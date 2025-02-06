@@ -15,7 +15,7 @@ app.use(express_1.default.json()); // Middleware for available the transfer data
 app.use(
   (0, cors_1.default)({
     // Config router
-    origin: "https://kennyml-frontend.vercel.app/",
+    origin: "https://kennyml-frontend.vercel.app",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
