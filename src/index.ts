@@ -9,7 +9,7 @@ app.use(express.json()); // Middleware for available the transfer data with json
 app.use(
   cors({
     // Config router
-    origin: "http://localhost:3000",
+    origin: "https://kennyml-frontend.vercel.app/",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
