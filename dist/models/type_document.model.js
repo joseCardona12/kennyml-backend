@@ -7,26 +7,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_typescript_1 = require("sequelize-typescript");
-let StatusModel = class StatusModel extends sequelize_typescript_1.Model {
+let TypeDocumentModel = class TypeDocumentModel extends sequelize_typescript_1.Model {
 };
 __decorate([
     sequelize_typescript_1.AutoIncrement,
     sequelize_typescript_1.PrimaryKey,
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.INTEGER,
-        allowNull: false,
+        allowNull: true,
     })
-], StatusModel.prototype, "id", void 0);
+], TypeDocumentModel.prototype, "id", void 0);
 __decorate([
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.STRING(100),
         allowNull: false,
     })
-], StatusModel.prototype, "name", void 0);
-StatusModel = __decorate([
+], TypeDocumentModel.prototype, "name", void 0);
+TypeDocumentModel = __decorate([
     (0, sequelize_typescript_1.Table)({
-        tableName: "status",
+        tableName: "type_documents",
         timestamps: false,
     })
-], StatusModel);
-exports.default = StatusModel;
+], TypeDocumentModel);
+exports.default = TypeDocumentModel;

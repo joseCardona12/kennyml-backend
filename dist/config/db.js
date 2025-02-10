@@ -11,5 +11,13 @@ exports.sequelize = new sequelize_typescript_1.Sequelize({
     username: loadEnv_1.user_db,
     password: loadEnv_1.password_db,
     database: loadEnv_1.name_db,
-    models: [models_1.TaskModel, models_1.StatusModel],
+    models: [
+        models_1.TaskModel,
+        models_1.StatusModel,
+        models_1.LevelModel,
+        models_1.RoleModel,
+        models_1.TypeDocumentModel,
+        models_1.UserModel,
+        models_1.VerificacionCodeModel,
+    ],
 });
