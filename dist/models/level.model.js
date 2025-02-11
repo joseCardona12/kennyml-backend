@@ -23,6 +23,12 @@ __decorate([
         allowNull: false,
     })
 ], LevelModel.prototype, "name", void 0);
+__decorate([
+    (0, sequelize_typescript_1.Column)({
+        type: sequelize_typescript_1.DataType.STRING(100),
+        allowNull: false,
+    })
+], LevelModel.prototype, "description", void 0);
 LevelModel = __decorate([
     (0, sequelize_typescript_1.Table)({
         tableName: "levels",

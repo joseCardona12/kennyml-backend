@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_typescript_1 = require("sequelize-typescript");
-let VerificacionCodeModel = class VerificacionCodeModel extends sequelize_typescript_1.Model {
+let CityModel = class CityModel extends sequelize_typescript_1.Model {
 };
 __decorate([
     sequelize_typescript_1.AutoIncrement,
@@ -16,17 +16,17 @@ __decorate([
         type: sequelize_typescript_1.DataType.INTEGER,
         allowNull: true,
     })
-], VerificacionCodeModel.prototype, "id", void 0);
+], CityModel.prototype, "id", void 0);
 __decorate([
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.STRING(100),
         allowNull: false,
     })
-], VerificacionCodeModel.prototype, "code", void 0);
-VerificacionCodeModel = __decorate([
+], CityModel.prototype, "name", void 0);
+CityModel = __decorate([
     (0, sequelize_typescript_1.Table)({
-        tableName: "verification_codes",
+        tableName: "cities",
         timestamps: false,
     })
-], VerificacionCodeModel);
-exports.default = VerificacionCodeModel;
+], CityModel);
+exports.default = CityModel;

@@ -19,5 +19,6 @@ exports.sequelize = new sequelize_typescript_1.Sequelize({
         models_1.TypeDocumentModel,
         models_1.UserModel,
         models_1.VerificacionCodeModel,
+        models_1.CityModel,
     ],
 });

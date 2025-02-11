@@ -13,6 +13,8 @@ const sequelize_typescript_1 = require("sequelize-typescript");
 const type_document_model_1 = __importDefault(require("./type_document.model"));
 const role_model_1 = __importDefault(require("./role.model"));
 const level_model_1 = __importDefault(require("./level.model"));
+const city_model_1 = __importDefault(require("./city.model"));
+const verification_code_model_1 = __importDefault(require("./verification_code.model"));
 let UserModel = class UserModel extends sequelize_typescript_1.Model {
 };
 __decorate([
@@ -61,12 +63,6 @@ __decorate([
 ], UserModel.prototype, "address", void 0);
 __decorate([
     (0, sequelize_typescript_1.Column)({
-        type: sequelize_typescript_1.DataType.STRING(100),
-        allowNull: false,
-    })
-], UserModel.prototype, "city", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.TEXT,
         allowNull: false,
     })
@@ -104,6 +100,20 @@ __decorate([
         allowNull: false,
     })
 ], UserModel.prototype, "level_id", void 0);
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => city_model_1.default),
+    (0, sequelize_typescript_1.Column)({
+        type: sequelize_typescript_1.DataType.INTEGER,
+        allowNull: false,
+    })
+], UserModel.prototype, "city_id", void 0);
+__decorate([
+    (0, sequelize_typescript_1.ForeignKey)(() => verification_code_model_1.default),
+    (0, sequelize_typescript_1.Column)({
+        type: sequelize_typescript_1.DataType.INTEGER,
+        allowNull: false,
+    })
+], UserModel.prototype, "code_verification_id", void 0);
 UserModel = __decorate([
     (0, sequelize_typescript_1.Table)({
         tableName: "users",

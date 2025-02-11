@@ -12,7 +12,7 @@ const app = (0, express_1.default)(); // Init projec using express
 app.use(express_1.default.json()); // Middleware for available the transfer data with json format.
 app.use((0, cors_1.default)({
     // Config router
-    origin: ["https://kennyml-frontend.vercel.app", "localhost:3000"],
+    origin: ["https://kennyml-frontend.vercel.app", "http://localhost:3000"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],

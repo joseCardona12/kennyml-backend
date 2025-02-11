@@ -8,10 +8,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UtilApplication = void 0;
 const config_1 = require("../config");
 const loadEnv_1 = require("../config/loadEnv");
+const bcrypt_1 = __importDefault(require("bcrypt"));
 class UtilApplication {
     static consoleMessage(message) {
         console.log({
@@ -33,7 +37,22 @@ class UtilApplication {
         });
     }
     static verifyExistsParam(...values) {
-        return values.every(value => value);
+        return values.every((value) => value);
+    }
+    static encryptPassword(password) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const salt = yield bcrypt_1.default.genSalt(10);
+            const hashedPassword = yield bcrypt_1.default.hash(password, salt);
+            return hashedPassword;
+        });
+    }
+    static verifyPassword(password, passwordSave) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return bcrypt_1.default.compare(password, passwordSave);
+        });
+    }
+    static generateNumberRandom() {
+        return Math.floor(Math.random() * 101);
     }
 }
 exports.UtilApplication = UtilApplication;
