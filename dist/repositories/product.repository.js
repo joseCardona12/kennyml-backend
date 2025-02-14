@@ -60,7 +60,7 @@ let ProductRepository = class ProductRepository {
     destroy(id) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                yield product_model_1.default.destroy({
+                return yield product_model_1.default.destroy({
                     where: { id },
                 });
             }

@@ -60,7 +60,7 @@ let ProductService = class ProductService {
     deleteProduct(id) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                yield this.productRepository.destroy(id);
+                return yield this.productRepository.destroy(id);
             }
             catch (error) {
                 throw error;

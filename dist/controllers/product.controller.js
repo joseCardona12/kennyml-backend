@@ -131,7 +131,12 @@ class ProductController {
             }
             const productService = tsyringe_1.container.resolve(product_service_1.default);
             try {
-                yield productService.deleteProduct(parseInt(id));
+                const product = yield productService.deleteProduct(parseInt(id));
+                res.status(200).json({
+                    message: "Product deleted correctly",
+                    statusCode: 200,
+                    data: product,
+                });
             }
             catch (error) {
                 res.status(500).json({
