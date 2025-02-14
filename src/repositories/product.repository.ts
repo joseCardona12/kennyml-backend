@@ -41,9 +41,9 @@ export default class ProductRepository {
     }
   }
 
-  public async destroy(id: number): Promise<void> {
+  public async destroy(id: number): Promise<number> {
     try {
-      await ProductModel.destroy({
+      return await ProductModel.destroy({
         where: { id },
       });
     } catch (error) {

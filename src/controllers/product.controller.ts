@@ -165,7 +165,12 @@ class ProductController {
     }
     const productService = container.resolve(ProductService);
     try {
-      await productService.deleteProduct(parseInt(id));
+      const product = await productService.deleteProduct(parseInt(id));
+      res.status(200).json({
+        message: "Product deleted correctly",
+        statusCode: 200,
+        data: product,
+      });
     } catch (error: unknown) {
       res.status(500).json({
         message: `Error internal server  ${error}`,
