@@ -2,6 +2,7 @@ import {
   AutoIncrement,
   Column,
   DataType,
+  ForeignKey,
   HasOne,
   Model,
   PrimaryKey,
@@ -10,15 +11,15 @@ import {
 import ProductModel from "./product.model";
 
 @Table({
-  tableName: "status",
+  tableName: "places",
   timestamps: false,
 })
-export default class StatusModel extends Model {
+export default class PlaceModel extends Model {
   @AutoIncrement
   @PrimaryKey
   @Column({
     type: DataType.INTEGER,
-    allowNull: false,
+    allowNull: true,
   })
   id!: number;
 
@@ -26,7 +27,7 @@ export default class StatusModel extends Model {
     type: DataType.STRING(100),
     allowNull: false,
   })
-  name!: number;
+  name!: string;
 
   @HasOne(() => ProductModel)
   product!: ProductModel;

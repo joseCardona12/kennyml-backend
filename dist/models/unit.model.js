@@ -11,29 +11,29 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_typescript_1 = require("sequelize-typescript");
 const product_model_1 = __importDefault(require("./product.model"));
-let StatusModel = class StatusModel extends sequelize_typescript_1.Model {
+let UnitModel = class UnitModel extends sequelize_typescript_1.Model {
 };
 __decorate([
     sequelize_typescript_1.AutoIncrement,
     sequelize_typescript_1.PrimaryKey,
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.INTEGER,
-        allowNull: false,
+        allowNull: true,
     })
-], StatusModel.prototype, "id", void 0);
+], UnitModel.prototype, "id", void 0);
 __decorate([
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.STRING(100),
         allowNull: false,
     })
-], StatusModel.prototype, "name", void 0);
+], UnitModel.prototype, "name", void 0);
 __decorate([
     (0, sequelize_typescript_1.HasOne)(() => product_model_1.default)
-], StatusModel.prototype, "product", void 0);
-StatusModel = __decorate([
+], UnitModel.prototype, "product", void 0);
+UnitModel = __decorate([
     (0, sequelize_typescript_1.Table)({
-        tableName: "status",
+        tableName: "units",
         timestamps: false,
     })
-], StatusModel);
-exports.default = StatusModel;
+], UnitModel);
+exports.default = UnitModel;

@@ -15,6 +15,7 @@ const role_model_1 = __importDefault(require("./role.model"));
 const level_model_1 = __importDefault(require("./level.model"));
 const city_model_1 = __importDefault(require("./city.model"));
 const verification_code_model_1 = __importDefault(require("./verification_code.model"));
+const product_model_1 = __importDefault(require("./product.model"));
 let UserModel = class UserModel extends sequelize_typescript_1.Model {
 };
 __decorate([
@@ -114,6 +115,9 @@ __decorate([
         allowNull: false,
     })
 ], UserModel.prototype, "code_verification_id", void 0);
+__decorate([
+    (0, sequelize_typescript_1.HasMany)(() => product_model_1.default)
+], UserModel.prototype, "products", void 0);
 UserModel = __decorate([
     (0, sequelize_typescript_1.Table)({
         tableName: "users",

@@ -10,6 +10,9 @@ import {
   UserModel,
   VerificacionCodeModel,
 } from "../models";
+import ProductModel from "../models/product.model";
+import PlaceModel from "../models/place.model";
+import UnitModel from "../models/unit.model";
 export const sequelize: Sequelize = new Sequelize({
   dialect: "mysql",
   host: host_db,
@@ -26,5 +29,8 @@ export const sequelize: Sequelize = new Sequelize({
     UserModel,
     VerificacionCodeModel,
     CityModel,
+    ProductModel,
+    PlaceModel,
+    UnitModel,
   ],
 });

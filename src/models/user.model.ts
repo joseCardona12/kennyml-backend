@@ -3,6 +3,7 @@ import {
   Column,
   DataType,
   ForeignKey,
+  HasMany,
   Model,
   PrimaryKey,
   Table,
@@ -12,6 +13,7 @@ import RoleModel from "./role.model";
 import LevelModel from "./level.model";
 import CityModel from "./city.model";
 import VerificacionCodeModel from "./verification_code.model";
+import ProductModel from "./product.model";
 
 @Table({
   tableName: "users",
@@ -114,4 +116,7 @@ export default class UserModel extends Model {
     allowNull: false,
   })
   code_verification_id!: string;
+
+  @HasMany(() => ProductModel)
+  products!: ProductModel[];
 }
