@@ -150,6 +150,29 @@ class ProductController {
       });
     }
   }
+
+  public static async deleteProduct(
+    req: Request,
+    res: Response
+  ): Promise<void> {
+    const { id } = req.params;
+    if (!id) {
+      res.status(400).json({
+        message: "Error. Is required id product",
+        statusCode: 400,
+      });
+      return;
+    }
+    const productService = container.resolve(ProductService);
+    try {
+      await productService.deleteProduct(parseInt(id));
+    } catch (error: unknown) {
+      res.status(500).json({
+        message: `Error internal server  ${error}`,
+        statusCode: 500,
+      });
+    }
+  }
 }
 
 export default ProductController;

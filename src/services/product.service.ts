@@ -36,4 +36,12 @@ export default class ProductService {
       throw error;
     }
   }
+
+  public async deleteProduct(id: number): Promise<void> {
+    try {
+      await this.productRepository.destroy(id);
+    } catch (error: unknown) {
+      throw error;
+    }
+  }
 }

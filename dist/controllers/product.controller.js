@@ -119,5 +119,27 @@ class ProductController {
             }
         });
     }
+    static deleteProduct(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { id } = req.params;
+            if (!id) {
+                res.status(400).json({
+                    message: "Error. Is required id product",
+                    statusCode: 400,
+                });
+                return;
+            }
+            const productService = tsyringe_1.container.resolve(product_service_1.default);
+            try {
+                yield productService.deleteProduct(parseInt(id));
+            }
+            catch (error) {
+                res.status(500).json({
+                    message: `Error internal server  ${error}`,
+                    statusCode: 500,
+                });
+            }
+        });
+    }
 }
 exports.default = ProductController;

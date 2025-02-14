@@ -40,4 +40,14 @@ export default class ProductRepository {
       throw new Error(`${error}`);
     }
   }
+
+  public async destroy(id: number): Promise<void> {
+    try {
+      await ProductModel.destroy({
+        where: { id },
+      });
+    } catch (error) {
+      throw new Error(`${error}`);
+    }
+  }
 }

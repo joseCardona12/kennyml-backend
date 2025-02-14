@@ -9,4 +9,5 @@ const productRouter = (0, express_1.Router)();
 productRouter.get("/", product_controller_1.default.getAllProducts);
 productRouter.post("/", product_controller_1.default.createProduct);
 productRouter.put("/:id", product_controller_1.default.updateProduct);
+productRouter.delete("/:id", product_controller_1.default.deleteProduct);
 exports.default = productRouter;
