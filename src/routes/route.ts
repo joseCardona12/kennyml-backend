@@ -7,6 +7,7 @@ import productRouter from "./products/product.router";
 import unitRouter from "./units/unit.router";
 import placeRouter from "./places/place.router";
 import statusRouter from "./status/status.router";
+import shoppingRouter from "./shopping/shopping.router";
 
 const router: Router = Router();
 router.use("/auth", authRouter);
@@ -17,5 +18,6 @@ router.use("/products", productRouter);
 router.use("/units", unitRouter);
 router.use("/places", placeRouter);
 router.use("/status", statusRouter);
+router.use("/shoppings", shoppingRouter);
 
 export default router;

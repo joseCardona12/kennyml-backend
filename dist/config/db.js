@@ -29,5 +29,6 @@ exports.sequelize = new sequelize_typescript_1.Sequelize({
         product_model_1.default,
         place_model_1.default,
         unit_model_1.default,
+        models_1.ShoppingModel,
     ],
 });

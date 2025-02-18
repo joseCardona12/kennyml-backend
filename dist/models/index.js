@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CityModel = exports.VerificacionCodeModel = exports.UserModel = exports.TypeDocumentModel = exports.RoleModel = exports.LevelModel = exports.StatusModel = exports.TaskModel = void 0;
+exports.ShoppingModel = exports.ProductModel = exports.CityModel = exports.VerificacionCodeModel = exports.UserModel = exports.TypeDocumentModel = exports.RoleModel = exports.LevelModel = exports.StatusModel = exports.TaskModel = void 0;
 const task_model_1 = __importDefault(require("./task.model"));
 exports.TaskModel = task_model_1.default;
 const statusModel_1 = __importDefault(require("./statusModel"));
@@ -20,3 +20,7 @@ const verification_code_model_1 = __importDefault(require("./verification_code.m
 exports.VerificacionCodeModel = verification_code_model_1.default;
 const city_model_1 = __importDefault(require("./city.model"));
 exports.CityModel = city_model_1.default;
+const product_model_1 = __importDefault(require("./product.model"));
+exports.ProductModel = product_model_1.default;
+const shopping_1 = __importDefault(require("./shopping"));
+exports.ShoppingModel = shopping_1.default;

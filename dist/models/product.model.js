@@ -14,6 +14,7 @@ const statusModel_1 = __importDefault(require("./statusModel"));
 const unit_model_1 = __importDefault(require("./unit.model"));
 const place_model_1 = __importDefault(require("./place.model"));
 const user_model_1 = __importDefault(require("./user.model"));
+const shopping_1 = __importDefault(require("./shopping"));
 let ProductModel = class ProductModel extends sequelize_typescript_1.Model {
 };
 __decorate([
@@ -82,6 +83,9 @@ __decorate([
         allowNull: false,
     })
 ], ProductModel.prototype, "user_id", void 0);
+__decorate([
+    (0, sequelize_typescript_1.HasMany)(() => shopping_1.default)
+], ProductModel.prototype, "shoppings", void 0);
 ProductModel = __decorate([
     (0, sequelize_typescript_1.Table)({
         tableName: "products",

@@ -3,6 +3,7 @@ import {
   Column,
   DataType,
   ForeignKey,
+  HasMany,
   HasOne,
   Model,
   PrimaryKey,
@@ -12,6 +13,7 @@ import StatusModel from "./statusModel";
 import UnitModel from "./unit.model";
 import PlaceModel from "./place.model";
 import UserModel from "./user.model";
+import ShoppingModel from "./shopping";
 
 @Table({
   tableName: "products",
@@ -83,4 +85,7 @@ export default class ProductModel extends Model {
     allowNull: false,
   })
   user_id!: number;
+
+  @HasMany(() => ShoppingModel)
+  shoppings!: ShoppingModel[];
 }

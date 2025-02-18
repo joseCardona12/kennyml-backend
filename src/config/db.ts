@@ -4,6 +4,7 @@ import {
   CityModel,
   LevelModel,
   RoleModel,
+  ShoppingModel,
   StatusModel,
   TaskModel,
   TypeDocumentModel,
@@ -32,5 +33,6 @@ export const sequelize: Sequelize = new Sequelize({
     ProductModel,
     PlaceModel,
     UnitModel,
+    ShoppingModel,
   ],
 });
