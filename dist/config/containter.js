@@ -22,6 +22,7 @@ const product_repository_1 = __importDefault(require("../repositories/product.re
 const place_repository_1 = __importDefault(require("../repositories/place.repository"));
 const unit_repository_1 = __importDefault(require("../repositories/unit.repository"));
 const status_repository_1 = __importDefault(require("../repositories/status.repository"));
+const cloudinary_service_1 = __importDefault(require("../services/cloudinary.service"));
 tsyringe_1.container.registerSingleton(models_1.TaskModel);
 tsyringe_1.container.registerSingleton(services_1.TaskService);
 tsyringe_1.container.registerSingleton(repositories_1.TaskRepository);
@@ -42,3 +43,4 @@ tsyringe_1.container.registerSingleton(unit_repository_1.default);
 tsyringe_1.container.registerSingleton(models_1.StatusModel);
 tsyringe_1.container.registerSingleton(status_service_1.default);
 tsyringe_1.container.registerSingleton(status_repository_1.default);
+tsyringe_1.container.registerSingleton(cloudinary_service_1.default);
