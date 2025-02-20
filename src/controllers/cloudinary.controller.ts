@@ -20,6 +20,7 @@ class CloudinaryController {
     const cloudinaryService = container.resolve(CloudinaryService);
     try {
       const cloudinaryCreate = await cloudinaryService.createCloudinary(file);
+      console.log("response cloudinary", cloudinaryCreate);
       res.status(201).json({
         message: "Cloudinary created success",
         statusCode: 201,
