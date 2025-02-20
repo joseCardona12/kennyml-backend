@@ -8,6 +8,7 @@ class CloudinaryController {
     res: Response
   ): Promise<void> {
     const file = req.body;
+    console.log("file", file);
     if (!file) {
       res.status(400).json({
         message: "Is required file",
