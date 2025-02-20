@@ -17,6 +17,7 @@ import ProductRepository from "../repositories/product.repository";
 import PlaceRepository from "../repositories/place.repository";
 import UnitRepository from "../repositories/unit.repository";
 import StatusRepository from "../repositories/status.repository";
+import CloudinaryService from "../services/cloudinary.service";
 
 container.registerSingleton<TaskModel>(TaskModel);
 container.registerSingleton<TaskService>(TaskService);
@@ -38,3 +39,4 @@ container.registerSingleton<UnitRepository>(UnitRepository);
 container.registerSingleton<StatusModel>(StatusModel);
 container.registerSingleton<StatusService>(StatusService);
 container.registerSingleton<StatusRepository>(StatusRepository);
+container.registerSingleton<CloudinaryService>(CloudinaryService);
